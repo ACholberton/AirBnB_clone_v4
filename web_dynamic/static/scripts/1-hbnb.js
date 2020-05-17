@@ -1,8 +1,8 @@
-$(docuemnt).ready(function () {
+$(document).ready(function () {
   const amenities = {};
-  $('input type="checkbox"').click(function () {
+  $('input[type="checkbox"]').click(function () {
    $(this).each(function () {
-     if (this.check) {
+     if (this.checked) {
        amenities[$(this.data('id'))] = $(this).data('name');
      } else {
        delete amenities[$(this.data('id'))];
