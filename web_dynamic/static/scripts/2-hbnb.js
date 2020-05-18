@@ -8,11 +8,11 @@ $(document).ready(function () {
        delete amenities[$(this.data('id'))];
      }
    });
-    if (Object.values(amenities).length > 0) {
-      $('.amenities h4').text(object.value(amenities).join(', '));
-    } else {
-      $('.amenities h4').html('&nbsp;');
-    }
+      if (Object.values(amenities).length > 0) {
+	  $('.amenities h4').text(object.value(amenities).join(', '));
+      } else {
+	  $('.amenities h4').html('&nbsp;');
+      }
   });
 });
 
