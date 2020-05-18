@@ -18,6 +18,7 @@ header .logo {
     border-radius: 50%;
     float: right;
     margin-right: 30px;
+    margin-top:10px;
 }
 
 .available {
