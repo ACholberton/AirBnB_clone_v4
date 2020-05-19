@@ -1,13 +1,13 @@
 $(document).ready(function () {
   const amenities = {};
   $('input[type="checkbox"]').click(function () {
-   $(this).each(function () {
-     if (this.checked) {
-       amenities[$(this.data('id'))] = $(this).data('name');
-     } else {
-       delete amenities[$(this.data('id'))];
-     }
-   });
+    $(this).each(function () {
+      if (this.checked) {
+        amenities[$(this.data('id'))] = $(this).data('name');
+      } else {
+        delete amenities[$(this.data('id'))];
+      }
+    });
       if (Object.values(amenities).length > 0) {
 	  $('.amenities h4').text(object.value(amenities).join(', '));
       } else {
@@ -16,11 +16,11 @@ $(document).ready(function () {
   });
 });
 
-$.get("http://0.0.0.0:5001/api/v1/status/", function (data, status) {
-    console.log(data);
-    if (data.status === 'OK') {
-	$('DIV#api_status').addClass('available');
-    } else {
-	$('DIV#api_status').removeClass('available');
-    }
+$.get('http://0.0.0.0:5001/api/v1/status/', function (data, status) {
+  console.log(data);
+  if (data.status === 'OK') {
+    $('DIV#api_status').addClass('available');
+  } else {
+    $('DIV#api_status').removeClass('available');
+  }
 });
